@@ -62,7 +62,8 @@ ggplot(gdp_s, aes(x=연도, y=비중, fill=산업))+
         legend.position="bottom") + ylab("비중") + xlab(NULL)
 
 ## 그림 8-21 우리나라 제조업의 재고출하순환도
-
+library(tsibble) 
+##tsibble 패키지 설치시 세션 종료. 워크디렉토리 및 기타 라이브러리 재실행 필요
 # 데이터 불러오기
 inven1 = read_excel("./data/ch7/재고출하지수.xlsx")
 연도   = seq(as.Date("2000-01-01"), as.Date("2022-04-01"), "month")
